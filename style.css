@@ -1,0 +1,100 @@
+body{
+    background-color:#242424;
+    text-align: center;
+    color: wheat;
+
+}
+.heading,.gameOver,.level-mbl{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 30px;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(2,200px);
+    grid-template-rows: repeat(2,200px);
+    gap: 30px;
+    justify-content: center;
+    }
+.box {
+    border: 10px solid black;
+    border-radius: 30px;
+
+}
+#green{
+    background-color: green;
+}
+#red{
+    background-color: red;
+}
+#yellow{
+    background-color: yellow;
+}
+#blue{
+    background-color: blue;
+}
+.focus{
+    box-shadow: whitesmoke;
+    border-color: purple;
+}
+
+/*
+start=false
+level=0
+
+after cliking any button start=true
+nextsequence()
+uerpatern=[]
+level++=>1
+gamepatern=["red"]
+uerpatern=["red"]
+checkAnser(currentlevel-1)=>game vs user =>nextsequence()
+userpatern=[]
+level++=>2
+gamepatern=["red","blue"]
+userpatern=["red","blue"]
+checkAnser(currenlevel-1)=>game vs user=>nextsequence()
+*/
+.start-btn,.level-mbl{
+    display: none;
+}
+@media (max-width:640px){
+   .heading{
+       display: none;
+   }
+   /* button{
+       display: inline-block;
+   } */
+  
+   .start-btn {
+    background: #11cdd4;
+    background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
+    background-image: -moz-linear-gradient(top, #11cdd4, #11999e);
+    background-image: -ms-linear-gradient(top, #11cdd4, #11999e);
+    background-image: -o-linear-gradient(top, #11cdd4, #11999e);
+    background-image: linear-gradient(to bottom, #11cdd4, #11999e);
+    -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+/*need this snippit in order to stay inside the box*/
+    margin-bottom: 50px;
+    display: inline-block;
+    
+  }
+  
+  .start-btn:hover {
+    background: #30e3cb;
+    background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
+    text-decoration: none;
+  }
+   
+}
